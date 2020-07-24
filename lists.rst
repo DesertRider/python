@@ -8,7 +8,6 @@ A list is created in Python by using the square brackets ([, and ]) and separati
 There's really not a limit to how long our list can be (there is, but it's very unlikely that we'll hit it while scripting)
 
 Reading from Lists
-------------------
 
 To access an individual element of a list you can use the index and Python uses a zero based index system.
 
