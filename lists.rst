@@ -2,9 +2,8 @@ Lists
 =====
 
 A list is created in Python by using the square brackets ([, and ]) and separating the values by commas. Here's an example list:
-::
     
-    my_list = [1, 2, 3, 4, 5]
+>>> my_list = [1, 2, 3, 4, 5]
 
 There's really not a limit to how long our list can be (there is, but it's very unlikely that we'll hit it while scripting)
 
