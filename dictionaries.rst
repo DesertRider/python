@@ -5,10 +5,10 @@ Dictionaries are the main mapping type that we'll use in Python. This object is 
 
 Things to note about dictionaries:
 
-    # Unlike Python 2 dictionaries, as of Python 3.6 keys are ordered in dictionaries. Will need *OrderedDict* if you want this to work on another version of Python.
-    # You can set the key to any IMMUTABLE type (no lists)
-    # Avoid using things other than simple objects as keys.
-    # Each key can only have one value (so don't have duplicates when creating a dict)
+    #. Unlike Python 2 dictionaries, as of Python 3.6 keys are ordered in dictionaries. Will need *OrderedDict* if you want this to work on another version of Python.
+    #. You can set the key to any IMMUTABLE type (no lists)
+    #. Avoid using things other than simple objects as keys.
+    #. Each key can only have one value (so don't have duplicates when creating a dict)
 
 We create dictionary literals by using curly braces ({ and }), separating keys from values using colons (:), and separating key/value pairs using commas (,). Here's an example dictionary:
 
