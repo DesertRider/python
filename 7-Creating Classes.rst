@@ -5,27 +5,28 @@ Up to this point, we've been working with the built-in types that Python provide
 
 From this point on, most of the code that we'll be writing will be in files. Let's create a learning_python directory to hold these files that are really only there to facilitate learning.
 
-```
-$ mkdir ~/learning_python
-$ cd ~/learning_python
-```
+::
+    $ mkdir ~/learning_python
+    $ cd ~/learning_python
+
 
 Creating Our First Class
 
 For this lesson, we'll use a file called creating_classes.py. Our goal is to model a car that has tires and an engine. To create a class we use the class keyword, followed by a name for the class, starting with a capital letter. Let's create our first class, the Car class:
 
 ~/learning_python/creating_classes.py:
+::
 
-class Car:
-    """
-    Docstring describing the class
-    """
+    class Car:
+        """
+        Docstring describing the class
+        """
 
-    def __init__(self):
-        """
-        Docstring describing the method
-        """
-        pass
+        def __init__(self):
+            """
+            Docstring describing the method
+            """
+            pass
 
 This is an incredibly simple class. A few things to note here are that by adding a triple-quoted string right under the definition of the class and also right under the definition of a method/function we can add documentation. This documentation is nice because we can even add examples in this string that can be run as tests to help ensure that our documentation stays up to date with the implementation.
 
@@ -36,15 +37,16 @@ A method is a function that is defined within the context of an object, and Pyth
 We would like our Car class to hold onto a few pieces of data, the tires, and an engine. For the time being, we're just going to have those be a list of strings for the tires and a string for the engine. Let's modify our __init__ method to receive engine and tires as arguments:
 
 ~/learning_python/creating_classes.py
+::
 
-class Car:
-    """
-    Car models a car w/ tires and an engine
-    """
+    class Car:
+        """
+        Car models a car w/ tires and an engine
+        """
 
-    def __init__(self, engine, tires):
-        self.engine = engine
-        self.tires = tires
+        def __init__(self, engine, tires):
+            self.engine = engine
+            self.tires = tires
 
 What is self?
 
@@ -63,18 +65,18 @@ Defining a Custom Method
 The last thing that we'll do, to round out the first rendition of our first class, is to define a method that prints a description of the car to the screen:
 
 ~/learning_python/creating_classes.py
+::
+    class Car:
+        """
+        Car models a car w/ tires and an engine
+        """
 
-class Car:
-    """
-    Car models a car w/ tires and an engine
-    """
+        def __init__(self, engine, tires):
+            self.engine = engine
+            self.tires = tires
 
-    def __init__(self, engine, tires):
-        self.engine = engine
-        self.tires = tires
-
-    def description(self):
-        print(f"A car with an {self.engine} engine, and {self.tires} tires")
+        def description(self):
+            print(f"A car with an {self.engine} engine, and {self.tires} tires")
 
 Our description method doesn't have any actual arguments, but we pass the instance in as self. From there, we can access the instance's attributes by calling self.ATTRIBUTE_NAME.
 
