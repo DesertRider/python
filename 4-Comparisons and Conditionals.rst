@@ -96,10 +96,10 @@ In the even that we want to check multiple potential conditions we can use the e
 ...
 name is 5 characters
 
-We can test if a dictionary is empty this way:
+We can test if a variable (or array, or dictionary) is empty this way:
 
->>> if dictionary:
-...     dictionary
+>>> if var:
+...     var
 ... else:
 ...     print("it's empty")
 ...
