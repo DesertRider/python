@@ -5,8 +5,10 @@ Up to this point, we've been working with the built-in types that Python provide
 
 From this point on, most of the code that we'll be writing will be in files. Let's create a learning_python directory to hold these files that are really only there to facilitate learning.
 
+```
 $ mkdir ~/learning_python
 $ cd ~/learning_python
+```
 
 Creating Our First Class
 
