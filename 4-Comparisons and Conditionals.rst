@@ -95,3 +95,12 @@ In the even that we want to check multiple potential conditions we can use the e
 ...     print("name is short")
 ...
 name is 5 characters
+
+We can test if a dictionary is empty this way
+>>> if dictionary:
+...     dictionary
+... else:
+...     print("it's empty")
+...
+
+
