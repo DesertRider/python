@@ -6,6 +6,7 @@ Up to this point, we've been working with the built-in types that Python provide
 From this point on, most of the code that we'll be writing will be in files. Let's create a learning_python directory to hold these files that are really only there to facilitate learning.
 
 ::
+
     $ mkdir ~/learning_python
     $ cd ~/learning_python
 
@@ -53,11 +54,13 @@ What is self?
 A big change from writing functions to writing methods is the presence of self. This variable references the individual instance of the class that we're working with. The Car class holds on to the information about cars in general in our program, where an instance of the Car class (self) could represent my Honda Civic specifically. Let's load our class into the REPL using python3.7 -i creating_classes.py, and then we'll be able to create a Honda Civic:
 
 $ python3.7 -i creating_classes.py
->>> civic = Car('4-cylinder', ['front-driver', 'front-passenger', 'rear-driver', 'rear-passenger'])
->>> civic.tires
-['front-driver', 'front-passenger', 'rear-driver', 'rear-passenger']
->>> civic.engine
-'4-cylinder'
+::
+
+    >>> civic = Car('4-cylinder', ['front-driver', 'front-passenger', 'rear-driver', 'rear-passenger'])
+    >>> civic.tires
+    ['front-driver', 'front-passenger', 'rear-driver', 'rear-passenger']
+    >>> civic.engine
+    '4-cylinder'
 
 Once we have our instance, we're able to access our internal attributes by using a period (.).
 Defining a Custom Method
@@ -66,6 +69,7 @@ The last thing that we'll do, to round out the first rendition of our first clas
 
 ~/learning_python/creating_classes.py
 ::
+
     class Car:
         """
         Car models a car w/ tires and an engine
@@ -81,16 +85,17 @@ The last thing that we'll do, to round out the first rendition of our first clas
 Our description method doesn't have any actual arguments, but we pass the instance in as self. From there, we can access the instance's attributes by calling self.ATTRIBUTE_NAME.
 
 Let's use this new method:
+::
 
-$ python3.7 -i creating_classes.py
->>> honda = Car('4-cylinder', ['front-driver', 'front-passenger', 'rear-driver', 'rear-passenger'])
->>> honda.engine
-'4-cylinder'
->>> honda.tires
-['front-driver', 'front-passenger', 'rear-driver', 'rear-passenger']
->>> honda.description
-<bound method Car.description of <__main__.Car object at 0x7fb5f3fbbda0>>
->>> honda.description()
-A car with a 4-cylinder engine, and ['front-driver', 'front-passenger', 'rear-driver', 'rear-passenger'] tires
+    $ python3.7 -i creating_classes.py
+    >>> honda = Car('4-cylinder', ['front-driver', 'front-passenger', 'rear-driver', 'rear-passenger'])
+    >>> honda.engine
+    '4-cylinder'
+    >>> honda.tires
+    ['front-driver', 'front-passenger', 'rear-driver', 'rear-passenger']
+    >>> honda.description
+    <bound method Car.description of <__main__.Car object at 0x7fb5f3fbbda0>>
+    >>> honda.description()
+    A car with a 4-cylinder engine, and ['front-driver', 'front-passenger', 'rear-driver', 'rear-passenger'] tires
 
 Just like a normal function, if we don't use parenthesis the method won't execute.
