@@ -99,3 +99,14 @@ Let's use this new method:
     A car with a 4-cylinder engine, and ['front-driver', 'front-passenger', 'rear-driver', 'rear-passenger'] tires
 
 Just like a normal function, if we don't use parenthesis the method won't execute.
+
+On utilise la fonction __repr__ pour afficher la valeur/contenu de la classe:
+::
+
+    def __repr__(self):
+        """
+        Represent the tire's information in the standard notation present
+        on the side of the tire. Example: 'P215/65R15'
+        """
+        return (f"{self.tire_type}{self.width}/{self.ratio}"
+                + f"{self.construction}{self.diameter}")
