@@ -1,7 +1,7 @@
 Tuples
 ======
 
-Tuples are a fixed-width, immutable sequence type. We create tuples using parenthesis "(", ")" and at least one comma (,):
+Tuples are a fixed-width, immutable sequence type. We create tuples using parenthesis and at least one comma (,):
 
 >>> point = (2.0, 3.0)
 
